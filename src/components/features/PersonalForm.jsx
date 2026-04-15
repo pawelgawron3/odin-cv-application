@@ -3,9 +3,9 @@ export default function PersonalForm({ cvData, setCvData }) {
     { name: "firstName", label: "First name", type: "text" },
     { name: "lastName", label: "Last name", type: "text" },
     { name: "email", label: "Email", type: "email" },
-    { name: "github", label: "Github", type: "text" },
     { name: "phoneNumber", label: "Phone number", type: "tel" },
     { name: "address", label: "Address", type: "text" },
+    { name: "github", label: "Github", type: "text" },
   ];
 
   const handleChange = (e) => {

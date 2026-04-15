@@ -10,9 +10,9 @@ export default function App() {
       firstName: "",
       lastName: "",
       email: "",
-      github: "",
       phoneNumber: "",
       address: "",
+      github: "",
     },
     experience: {
       jobName: "",
