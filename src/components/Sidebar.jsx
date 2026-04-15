@@ -1,3 +1,5 @@
+import "../styles/sidebar.css";
+
 export default function Sidebar({ activeSection, setActiveSection }) {
   const sections = [
     "personal",
