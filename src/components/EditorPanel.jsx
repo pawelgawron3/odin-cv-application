@@ -1,3 +1,4 @@
+import "../styles/editorPanel.css";
 import PersonalForm from "./features/PersonalForm.jsx";
 import ExperienceForm from "./features/ExperienceForm.jsx";
 import EducationForm from "./features/EducationForm.jsx";
@@ -17,10 +18,16 @@ export default function EditorPanel({ activeSection, cvData, setCvData }) {
 
   if (!ActiveComponent)
     return (
-      <div>
+      <div className="editor">
         <p>Select a section</p>
       </div>
     );
 
-  return <ActiveComponent cvData={cvData} setCvData={setCvData} />;
+  return (
+    <div className="editor">
+      <div className="editor-card">
+        <ActiveComponent cvData={cvData} setCvData={setCvData} />
+      </div>
+    </div>
+  );
 }

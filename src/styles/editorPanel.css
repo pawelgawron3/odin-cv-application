@@ -1,0 +1,58 @@
+.editor {
+  flex: 1;
+  height: 100vh;
+  background: var(--bg);
+  padding: 32px;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+
+.editor-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.editor-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: all var(--transition);
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+  border-color: #2a2a35;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.15);
+}
