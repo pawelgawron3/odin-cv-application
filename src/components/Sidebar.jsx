@@ -1,4 +1,5 @@
 import "../styles/sidebar.css";
+import logo from "../assets/logo-cv-creator.png";
 
 export default function Sidebar({ activeSection, setActiveSection }) {
   const sections = [
@@ -11,7 +12,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
   return (
     <div className="sidebar">
-      <h1>CV creator</h1>
+      <div className="logo">
+        <img src={logo} alt="CV Creator" />
+      </div>
       <ul>
         {sections.map((section) => (
           <li
