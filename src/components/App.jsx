@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/app.css";
 import Sidebar from "./Sidebar.jsx";
 import EditorPanel from "./EditorPanel.jsx";
 import Preview from "./Preview.jsx";
