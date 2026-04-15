@@ -1,4 +1,4 @@
-export default function EducationForm() {
+export default function EducationForm({ cvData, setCvData }) {
   const fields = [
     { name: "schoolName", label: "School name", type: "text" },
     { name: "degree", label: "Degree", type: "text" },
@@ -6,6 +6,11 @@ export default function EducationForm() {
     { name: "startDate", label: "Start date", type: "date" },
     { name: "endDate", label: "End date", type: "date" },
   ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCvData({ ...cvData, education: { ...cvData.education, [name]: value } });
+  };
 
   return (
     <form>
@@ -19,7 +24,8 @@ export default function EducationForm() {
               type={field.type}
               name={field.name}
               id={field.name}
-              onChange={() => {}}
+              value={cvData.education[field.name]}
+              onChange={handleChange}
             />
           </div>
         ))}

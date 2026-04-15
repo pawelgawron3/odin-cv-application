@@ -1,4 +1,4 @@
-export default function PersonalForm() {
+export default function PersonalForm({ cvData, setCvData }) {
   const fields = [
     { name: "firstName", label: "First name", type: "text" },
     { name: "lastName", label: "Last name", type: "text" },
@@ -7,6 +7,12 @@ export default function PersonalForm() {
     { name: "phoneNumber", label: "Phone number", type: "tel" },
     { name: "address", label: "Address", type: "text" },
   ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCvData({ ...cvData, personal: { ...cvData.personal, [name]: value } });
+  };
+
   return (
     <form>
       <h2>Personal data</h2>
@@ -18,7 +24,8 @@ export default function PersonalForm() {
               id={field.name}
               name={field.name}
               type={field.type}
-              onChange={() => {}}
+              value={cvData.personal[field.name]}
+              onChange={handleChange}
             />
           </div>
         ))}

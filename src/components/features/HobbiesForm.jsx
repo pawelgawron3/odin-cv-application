@@ -1,4 +1,12 @@
-export default function HobbiesForm() {
+export default function HobbiesForm({ cvData, setCvData }) {
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setCvData({
+      ...cvData,
+      hobbies: value,
+    });
+  };
+
   return (
     <form>
       <h2>Hobbies</h2>
@@ -10,7 +18,8 @@ export default function HobbiesForm() {
           name="hobbies"
           rows={4}
           placeholder="e.g. football, chess, reading..."
-          onChange={() => {}}
+          value={cvData.hobbies}
+          onChange={handleChange}
         />
       </div>
     </form>
