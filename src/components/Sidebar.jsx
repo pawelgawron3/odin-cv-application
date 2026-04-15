@@ -1,5 +1,6 @@
 import "../styles/sidebar.css";
 import logo from "../assets/logo-cv-creator.png";
+import html2pdf from "html2pdf.js";
 
 export default function Sidebar({ activeSection, setActiveSection }) {
   const sections = [
@@ -9,6 +10,20 @@ export default function Sidebar({ activeSection, setActiveSection }) {
     "summary",
     "hobbies",
   ];
+
+  function handleDownload() {
+    const element = document.querySelector("div.cv");
+
+    html2pdf()
+      .set({
+        margin: 0,
+        filename: "cv.pdf",
+        html2canvas: { scale: 3 },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+      })
+      .from(element)
+      .save();
+  }
 
   return (
     <div className="sidebar">
@@ -26,6 +41,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           </li>
         ))}
       </ul>
+      <button id="downloadBtn" onClick={handleDownload}>
+        Download CV as PDF
+      </button>
     </div>
   );
 }
