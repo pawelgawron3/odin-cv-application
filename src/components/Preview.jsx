@@ -1,3 +1,5 @@
+import "../styles/preview.css";
+
 export default function Preview({ cvData }) {
   const { personal, experience, education, summary, hobbies } = cvData;
 
@@ -21,7 +23,7 @@ export default function Preview({ cvData }) {
         <section>
           {(personal.firstName || personal.lastName) && (
             <h1>
-              {personal.firstName} {personal.lastName}
+              Name: {personal.firstName} {personal.lastName}
             </h1>
           )}
           {personal.email && <p>Email: {personal.email}</p>}

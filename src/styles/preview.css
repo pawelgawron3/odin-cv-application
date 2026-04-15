@@ -1,0 +1,44 @@
+.preview {
+  flex: 1.2;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  overflow-y: auto;
+}
+
+.cv {
+  width: 100%;
+  max-width: 780px;
+  min-height: 800px;
+
+  background: #fff;
+  color: #111;
+
+  padding: 40px;
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.cv h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.cv h2 {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.cv p {
+  font-size: 14px;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
