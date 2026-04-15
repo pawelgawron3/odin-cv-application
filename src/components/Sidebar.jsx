@@ -3,11 +3,8 @@ export default function Sidebar({ activeSection, setActiveSection }) {
     "personal",
     "experience",
     "education",
-    "skills",
     "summary",
     "hobbies",
-    "languages",
-    "certificates",
   ];
 
   return (
