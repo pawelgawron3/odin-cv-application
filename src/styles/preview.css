@@ -10,18 +10,17 @@
 
 .cv {
   width: 100%;
-  max-width: 780px;
-  min-height: 800px;
-
+  max-width: 794px;
+  min-height: 1123px;
   background: #fff;
   color: #111;
-
   padding: 40px;
   border-radius: 8px;
-
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.05);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .cv h1 {
